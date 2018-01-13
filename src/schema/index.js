@@ -5,7 +5,7 @@ const resolvers = require('./resolvers');
 const typeDefs = gql`
   scalar DateTime
 
-  type Event {
+  type Show {
     title: String!
     time: DateTime!
     host: String!
@@ -13,11 +13,11 @@ const typeDefs = gql`
   }
 
   type Query {
-    allEvents: [Event!]!
+    allShows: [Show!]!
   }
 
   type Mutation {
-    addEvent(
+    addShow(
       title: String!
       time: DateTime!
       host: String!
